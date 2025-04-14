@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haftalık Sektör Raporu</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 700px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .header img {
+            max-width: 200px; /* Adjust size as needed */
+            height: auto;
+            margin-bottom: 15px;
+        }
+        .header h1 {
+            font-size: 28px;
+            color: #1a1a1a;
+            margin: 10px 0 5px 0;
+        }
+        .header .date {
+            font-size: 14px;
+            color: #666;
+        }
+        .section {
+            margin-bottom: 35px;
+        }
+        .section h2 {
+            font-size: 22px;
+            color: #0056b3; /* Example color */
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+        .executive-summary {
+            background-color: #f9f9f9;
+            border-left: 4px solid #0056b3;
+            padding: 15px 20px;
+            margin-bottom: 30px;
+            border-radius: 0 5px 5px 0;
+        }
+        .executive-summary h2 {
+            color: #0056b3;
+            margin-top: 0;
+            border-bottom: none;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        .executive-summary ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .executive-summary li {
+            margin-bottom: 8px;
+            color: #333;
+        }
+        .content-block {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #fdfdfd;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+        .content-block h3 {
+             font-size: 18px;
+             color: #333;
+             margin-top: 0;
+             margin-bottom: 10px;
+        }
+        .content-block p {
+            margin: 0 0 10px 0;
+            color: #444;
+        }
+        .content-block .source {
+            font-size: 12px;
+            color: #777;
+            margin-top: 10px;
+        }
+        .content-block .source a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .content-block .source a:hover {
+            text-decoration: underline;
+        }
+        .content-block-image {
+            width: 100%;
+            height: 180px;
+            background-color: #f0f0f0;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #999;
+            font-style: italic;
+            cursor: pointer; /* Add pointer cursor to indicate clickable image */
+        }
+        .content-block-image img {
+            max-width: 100%;
+            max-height: 180px;
+            object-fit: cover;
+            border-radius: 4px;
+            transition: transform 0.2s; /* Add subtle hover effect */
+        }
+        .content-block-image img:hover {
+            transform: scale(1.02); /* Slight zoom on hover */
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 12px;
+            color: #888;
+        }
+
+        /* Modal styles */
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            animation: zoom 0.3s ease-in-out;
+        }
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        @keyframes zoom {
+            from {transform: scale(0.1)}
+            to {transform: scale(1)}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="Eventful_logo.png" alt="Eventful Logo">
+            <h1>Haftalık Sektör Raporu</h1>
+            <p class="date">15 Nisan 2025</p>
+        </div>
+
+        <div class="executive-summary">
+            <h2>Yönetici Özeti</h2>
+            <ul>
+                <li>Craft bira sektörü yenilikçilik kaybı ve değişen ilgiyle doygunluğa ulaşırken, yatırımcı güveni düşüyor.</li>
+                <li>ABD'nin olası gümrük vergisi tehdidi, İskoç viskisi için önemli bir ihracat riski yaratıyor.</li>
+                <li>C&C Group, Menabrea üretimini İngiltere'ye taşıyarak pazar payını artırma stratejisi güdüyor.</li>
+                <li>Eden Mill ise yeni damıtımeviyle hem üretim kapasitesini hem de deneyimsel pazarlamayı güçlendiriyor.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Haftalık Sektör Notları</h2>
+
+            <div class="content-block">
+                <div class="content-block-image">
+                    <img src="craftbeer.png" alt="Craft Bira Görseli">
+                </div>
+                <h3>Craft Bira Sektöründe Duraklama</h3>
+                <p>2000'li yıllarda yükselişe geçen ve özellikle genç yetişkinler arasında popülerleşen craft bira sektörü, son dönemde önemli bir duraklama dönemine girmiş durumda. Uzun yıllar boyunca büyümesini sürdüren bu kategori, artık hem tüketici ilgisindeki azalma hem de yatırımcı güvenindeki düşüş nedeniyle zorlanıyor.</p>
+                <p>Sektör kaynaklarına göre, yaklaşık 10-15 yıldır piyasada olan craft bira markaları, tüketiciler için artık yeterince yenilikçi görünmüyor. Özellikle genç tüketiciler, daha hafif ve farklı deneyimler sunan içecek kategorilerine yöneliyor. Alkolsüz ürünlerin çeşitlenmesi ve premium RTD segmentindeki büyüme, bu ilgiyi farklı yönlere kaydırıyor.</p>
+                <p>Yatırımcı tarafında da benzer bir kırılma söz konusu. Geçmişte büyük potansiyel vadeden craft bira markaları, artık bazı yatırımcılar tarafından fazla değerlenmiş olarak görülüyor. Bilinirliği sınırlı markalar, yatırım çekmekte ya da şirket satışlarında hedeflenen değerlemelere ulaşmakta zorlanıyor. Bu duruma örnek olarak, Ekim 2024'te gerçekleşen Gipsy Hill satışı dikkat çekiyor: Pazar değeri 21 milyon sterlin olarak gösterilen marka, yalnızca 5 milyon sterline satıldı.</p>
+                <p>Craft bira sektörü halen belirli bir tüketici kitlesine hitap ediyor olsa da, son gelişmeler pazarın doygunluk noktasına ulaştığını ve farklılaşma ihtiyacının her zamankinden daha belirgin hale geldiğini gösteriyor.</p>
+                <p class="source">Kaynak: <a href="https://www.thegrocer.co.uk/news/distressed-craft-brewers-not-attractive-acquisition-targets-insolvency-firm-warns/703100.article" target="_blank" rel="noopener noreferrer">The Grocer</a></p>
+            </div>
+
+            <div class="content-block">
+                <div class="content-block-image">
+                    <img src="tariffnews.png" alt="İskoç Viskisi Görseli">
+                </div>
+                <h3>ABD Gümrük Vergileri ve İskoç Viskisi Endişeleri</h3>
+                <p>ABD'de yaklaşan seçim süreciyle birlikte gündeme gelen yeni gümrük vergisi açıklamaları, Birleşik Krallık'taki alkol üreticileri tarafından dikkatle takip ediliyor. Eski Başkan Donald Trump'ın yeniden göreve gelmesi halinde %10 oranında gümrük vergisi uygulayabileceğini belirtmesi, özellikle İskoç viski üreticileri arasında ciddi endişeye yol açtı.</p>
+                <p>İskoç viskisi, Birleşik Krallık'ın en önemli ihracat kalemlerinden biri olmaya devam ederken, ABD en büyük pazar konumunu koruyor. Bu nedenle, olası bir gümrük vergisi artışı sektörde büyük bir risk olarak görülüyor. Hatırlanacağı üzere, 2021 yılında ABD tarafından uygulanan %25'lik gümrük vergisi viski ihracatını yaklaşık dörtte bir oranında düşürmüş ve üreticiler 600 milyon sterlinlik bir kayıpla karşı karşıya kalmıştı.</p>
+                <p>Sektör temsilcileri, yeni bir vergi dalgasının hem ticaret hacmini daraltacağını hem de rekabet gücünü zayıflatacağını ifade ediyor. Sürecin nasıl şekilleneceği, hem üretici hem de ihracatçı firmalar açısından önümüzdeki dönemde yakından takip edilmesi gereken kritik bir gündem başlığı olarak öne çıkıyor.</p>
+                <p class="source">Kaynak: <a href="https://www.theguardian.com/business/2025/apr/04/uk-alcohol-industry-trump-tariffs-welsh-scottish-whisky-us" target="_blank" rel="noopener noreferrer">The Guardian</a></p>
+            </div>
+
+            <div class="content-block">
+                <div class="content-block-image">
+                    <span>Menabrea Bira Görseli</span>
+                </div>
+                <h3>Menabrea Üretimi Birleşik Krallık'a Kaydırıldı</h3>
+                <p>C&C Group, premium İtalyan lager markası Menabrea'nın üretimini İtalya'dan Birleşik Krallık'a kaydırdığını duyurdu. Şirketin bu hamlesi, İtalyan biralarının Birleşik Krallık pazarındaki payını artırma hedefiyle atılmış stratejik bir adım olarak değerlendiriliyor. Üretim, grubun Glasgow'daki Tennent's damıtımevinde gerçekleştirilecek.</p>
+                <p>Üretim değişikliğiyle paralel olarak, markanın pazarda görünürlüğünü artırmaya yönelik yeni bir promosyon kampanyası da başlatılacak. C&C Group, geçtiğimiz ay Menabrea ürünlerini ilk kez teneke kutu formatında satışa sunmuş ve bu formatla daha geniş bir tüketici kitlesine ulaşmayı hedeflediğini açıklamıştı.</p>
+                <p>Yeni ambalajla birlikte, 4'lü 440 ml Menabrea lager paketleri Tesco ve Waitrose mağazalarında 6.50 sterlinden başlayan fiyatlarla satışa sunuldu. Ürünün önümüzdeki haftalarda Asda ve Morrisons mağazalarında da raflarda yerini alması bekleniyor.</p>
+                <p class="source">Kaynak: <a href="https://www.thegrocer.co.uk/news/candc-group-shifts-menabrea-production-to-the-uk/703170.article" target="_blank" rel="noopener noreferrer">The Grocer</a></p>
+            </div>
+
+            <div class="content-block">
+                <div class="content-block-image">
+                    <img src="edenmill.png" alt="Eden Mill Damıtımevi Görseli">
+                </div>
+                 <h3>Eden Mill Yeni Tesisini Açtı</h3>
+                <p>İskoçya merkezli bağımsız üretici Eden Mill, hem cin hem de malt viski üretimi yapacağı yeni tesisinin kapılarını açtı. Yıllık bir milyon litre saf alkol üretim kapasitesine sahip olan tesis, aynı zamanda 300 varillik bir olgunlaştırma alanına da ev sahipliği yapıyor.</p>
+                <p>Yeni tesis sadece üretimle sınırlı kalmayacak; markanın deneyimsel pazarlama yaklaşımını destekleyecek bir müşteri alanı da planlanıyor. Aynı lokasyonda yer alacak bir kokteyl barı ve markaya ait ürünlerin satılacağı bir mağazanın Ağustos 2025'te faaliyete geçmesi bekleniyor.</p>
+                <p class="source">Kaynak: <a href="https://drinksint.com/news/fullstory.php/aid/11687/New_Eden_Mill_Distillery_fills_first_cask.html" target="_blank" rel="noopener noreferrer">Drinks International</a></p>
+            </div>
+
+             <div class="content-block">
+                <div class="content-block-image">
+                    <img src="winegroup.png" alt="The Wine Group Görseli">
+                </div>
+                 <h3>The Wine Group, Constellation Brands'ten Markalar Satın Aldı</h3>
+                <p>California merkezli The Wine Group, Constellation Brands ile önemli bir satın alma anlaşmasına imza attı. Anlaşma kapsamında yaklaşık 2.870 hektarlık üzüm bağı ve üç üretim tesisi The Wine Group bünyesine katılacak.</p>
+                <p>The Wine Group, portföyündeki markaların yanı sıra, Netflix'in popüler programı Love is Blind'da yarışmacılara sunulan şarapları üretmesiyle de dikkat çekiyor. Bu yönüyle hem geleneksel hem de popüler kültüre entegre marka iş birlikleriyle öne çıkan şirket, satın almayla birlikte pazar konumunu daha da sağlamlaştırmayı hedefliyor.</p>
+                <p class="source">Kaynak: <a href="https://www.thedrinksbusiness.com/2025/04/the-wine-group-to-acquire-six-brands-from-constellation/" target="_blank" rel="noopener noreferrer">The Drinks Business</a></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Haftanın Yeni Ürünleri</h2>
+
+            <div class="content-block">
+                <div class="content-block-image">
+                    <img src="cliq.png" alt="Lady A Provence Rosé Görseli">
+                </div>
+                <h3>Lady A Provence Rosé (Marks & Spencer)</h3>
+                <p>Soho House'ın popüler ürünü olan Lady A Provence Rosé şarabı artık Marks & Spencer mağazalarında satışa sunuldu. Bu roze şarap, %12.5 alkol oranına sahip ve standart 75cl cam şişede tüketicilere ulaşıyor. Ürün, Provence bölgesinin karakteristik hafif ve ferahlatıcı lezzetini M&S müşterileriyle buluşturuyor.</p>
+                <p class="source">Kaynak: <a href="https://www.thegrocer.co.uk/news/soho-house-favourite-lady-a-provence-rose-launches-in-mands/703261.article" target="_blank" rel="noopener noreferrer">The Grocer</a></p>
+            </div>
+
+            <div class="content-block">
+                <div class="content-block-image">
+                    <img src="reallizato.png" alt="Murray & Yeatman Realizzato Likör Görseli">
+                </div>
+                 <h3>Murray & Yeatman Realizzato Likör</h3>
+                 <p>Murray & Yeatman, kullanılmış kahve çekirdeklerinden damıtılarak üretilen Realizzato adında yeni bir likör piyasaya sürdü. %20 alkol oranına sahip bu yenilikçi içki, 50cl'lik cam şişelerde sunuluyor. Şirket, bu ürünün dünyada kullanılmış kahve telvesinden üretilen ilk likör olduğunu iddia ediyor ve sürdürülebilirliğe vurgu yapıyor.</p>
+                 <p class="source">Kaynak: <a href="https://www.thegrocer.co.uk/news/murray-and-yeatman-launches-world-first-liqueur-distilled-from-used-coffee-grounds/703150.article" target="_blank" rel="noopener noreferrer">The Grocer</a></p> </div>
+
+            <div class="content-block">
+                <div class="content-block-image">
+                    <img src="pinotg.png" alt="Aldi Costellore Pinot Grigio Görseli">
+                </div>
+                <h3>Aldi Costellore Pinot Grigio (Alüminyum Şişe)</h3>
+                <p>Aldi, kendi markası olan Costellore Pinot Grigio beyaz şarabını Birleşik Krallık süpermarketlerinde bir ilk olarak alüminyum şişede satışa çıkardı. %11 alkol oranına sahip bu şarap, 75cl'lik geri dönüştürülebilir ve daha hızlı soğuyan alüminyum şişelerde 5.99 GBP fiyatla satılıyor.</p>
+                <p class="source">Kaynak: <a href="https://www.thegrocer.co.uk/news/aldi-claims-uk-supermarket-first-with-own-label-aluminium-wine-bottle/703161.article" target="_blank" rel="noopener noreferrer">The Grocer</a></p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Göze Çarpan Pazarlama Kampanyaları</h2>
+
+            <div class="content-block">
+                <div class="content-block-image">
+                    <img src="briancox.png" alt="Malibu ve Brian Cox Kampanyası Görseli">
+                </div>
+                <h3>Malibu ve Brian Cox Kampanyası</h3>
+                <p>Malibu, yaz sezonunu "Succession" dizisiyle tanınan aktör Brian Cox'un yer aldığı yeni bir reklam kampanyasıyla başlattı. Kampanya, Cox'u alışılagelmiş ciddi rollerinin aksine, tatilin ve işten uzaklaşmanın keyfini çıkarırken gösteriyor.</p>
+                <p class="source">Kaynak: <a href="https://www.talkingretail.com/products-news/alcohol/brian-cox-fronts-malibu-campaign-08-04-2025/" target="_blank" rel="noopener noreferrer">Talking Retail</a></p>
+            </div>
+
+             <div class="content-block">
+                <div class="content-block-image">
+                    <img src="brotherscider.png" alt="Brothers Cider ve Glastonbury Festivali Görseli">
+                </div>
+                <h3>Brothers Cider ve Glastonbury Festivali Kampanyası</h3>
+                <p>Brothers Cider, İngiltere'nin ikonik müzik festivali Glastonbury'nin 2025 yılındaki resmi elma şarabı (cider) ortağı olacağını duyurdu. Şirket, bu sponsorlukla festival katılımcılarına özel etkinlikler ve deneyimler sunmayı planlıyor.</p>
+                <p class="source">Kaynak: <a href="https://drinksretailingnews.co.uk/brothers-cider-returns-as-official-glastonbury-partner/" target="_blank" rel="noopener noreferrer">Drinks Retailing News</a></p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 Eventful. Tüm hakları saklıdır.</p>
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        // Get modal elements
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImage");
+        const closeBtn = document.getElementsByClassName("close-modal")[0];
+        
+        // Get all content block images
+        const images = document.querySelectorAll(".content-block-image img");
+        
+        // Add click event to all images
+        images.forEach(img => {
+            img.addEventListener("click", function() {
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+            });
+        });
+        
+        // Close modal when clicking X
+        closeBtn.addEventListener("click", function() {
+            modal.style.display = "none";
+        });
+        
+        // Close modal when clicking outside the image
+        modal.addEventListener("click", function(e) {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
