@@ -74,6 +74,37 @@
             margin-bottom: 8px;
             color: #333;
         }
+        .table-of-contents {
+            background-color: #f5f7fa;
+            border: 1px solid #e3e8f0;
+            padding: 15px 25px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+        .table-of-contents h2 {
+            color: #333;
+            margin-top: 0;
+            border-bottom: none;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        .table-of-contents ul {
+            margin: 0;
+            padding-left: 20px;
+            list-style-type: none;
+        }
+        .table-of-contents li {
+            margin-bottom: 12px;
+        }
+        .table-of-contents a {
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .table-of-contents a:hover {
+            text-decoration: underline;
+        }
         .content-block {
             margin-bottom: 25px;
             padding: 15px;
@@ -104,6 +135,19 @@
         }
         .content-block .source a:hover {
             text-decoration: underline;
+        }
+        .back-to-top {
+            text-align: right;
+            margin-top: 5px;
+            font-size: 12px;
+        }
+        .back-to-top a {
+            color: #666;
+            text-decoration: none;
+        }
+        .back-to-top a:hover {
+            text-decoration: underline;
+            color: #0056b3;
         }
         .content-block-image {
             width: 100%;
@@ -188,8 +232,17 @@
             </ul>
         </div>
 
+        <div class="table-of-contents">
+            <h2>İçindekiler</h2>
+            <ul>
+                <li><a href="#sektor-notlari">Haftalık Sektör Notları</a></li>
+                <li><a href="#yeni-urunler">Haftanın Yeni Ürünleri</a></li>
+                <li><a href="#pazarlama-kampanyalari">Göze Çarpan Pazarlama Kampanyaları</a></li>
+            </ul>
+        </div>
+
         <div class="section">
-            <h2>Haftalık Sektör Notları</h2>
+            <h2 id="sektor-notlari">Haftalık Sektör Notları</h2>
 
             <div class="content-block">
                 <div class="content-block-image">
@@ -201,6 +254,7 @@
                 <p>Yatırımcı tarafında da benzer bir kırılma söz konusu. Geçmişte büyük potansiyel vadeden craft bira markaları, artık bazı yatırımcılar tarafından fazla değerlenmiş olarak görülüyor. Bilinirliği sınırlı markalar, yatırım çekmekte ya da şirket satışlarında hedeflenen değerlemelere ulaşmakta zorlanıyor. Bu duruma örnek olarak, Ekim 2024'te gerçekleşen Gipsy Hill satışı dikkat çekiyor: Pazar değeri 21 milyon sterlin olarak gösterilen marka, yalnızca 5 milyon sterline satıldı.</p>
                 <p>Craft bira sektörü halen belirli bir tüketici kitlesine hitap ediyor olsa da, son gelişmeler pazarın doygunluk noktasına ulaştığını ve farklılaşma ihtiyacının her zamankinden daha belirgin hale geldiğini gösteriyor.</p>
                 <p class="source">Kaynak: <a href="https://www.thegrocer.co.uk/news/distressed-craft-brewers-not-attractive-acquisition-targets-insolvency-firm-warns/703100.article" target="_blank" rel="noopener noreferrer">The Grocer</a></p>
+                <div class="back-to-top"><a href="#">Başa dön ↑</a></div>
             </div>
 
             <div class="content-block">
@@ -212,17 +266,19 @@
                 <p>İskoç viskisi, Birleşik Krallık'ın en önemli ihracat kalemlerinden biri olmaya devam ederken, ABD en büyük pazar konumunu koruyor. Bu nedenle, olası bir gümrük vergisi artışı sektörde büyük bir risk olarak görülüyor. Hatırlanacağı üzere, 2021 yılında ABD tarafından uygulanan %25'lik gümrük vergisi viski ihracatını yaklaşık dörtte bir oranında düşürmüş ve üreticiler 600 milyon sterlinlik bir kayıpla karşı karşıya kalmıştı.</p>
                 <p>Sektör temsilcileri, yeni bir vergi dalgasının hem ticaret hacmini daraltacağını hem de rekabet gücünü zayıflatacağını ifade ediyor. Sürecin nasıl şekilleneceği, hem üretici hem de ihracatçı firmalar açısından önümüzdeki dönemde yakından takip edilmesi gereken kritik bir gündem başlığı olarak öne çıkıyor.</p>
                 <p class="source">Kaynak: <a href="https://www.theguardian.com/business/2025/apr/04/uk-alcohol-industry-trump-tariffs-welsh-scottish-whisky-us" target="_blank" rel="noopener noreferrer">The Guardian</a></p>
+                <div class="back-to-top"><a href="#">Başa dön ↑</a></div>
             </div>
 
             <div class="content-block">
                 <div class="content-block-image">
-                    <span>Menabrea Bira Görseli</span>
+                    <span>menabrea.png</span>
                 </div>
                 <h3>Menabrea Üretimi Birleşik Krallık'a Kaydırıldı</h3>
                 <p>C&C Group, premium İtalyan lager markası Menabrea'nın üretimini İtalya'dan Birleşik Krallık'a kaydırdığını duyurdu. Şirketin bu hamlesi, İtalyan biralarının Birleşik Krallık pazarındaki payını artırma hedefiyle atılmış stratejik bir adım olarak değerlendiriliyor. Üretim, grubun Glasgow'daki Tennent's damıtımevinde gerçekleştirilecek.</p>
                 <p>Üretim değişikliğiyle paralel olarak, markanın pazarda görünürlüğünü artırmaya yönelik yeni bir promosyon kampanyası da başlatılacak. C&C Group, geçtiğimiz ay Menabrea ürünlerini ilk kez teneke kutu formatında satışa sunmuş ve bu formatla daha geniş bir tüketici kitlesine ulaşmayı hedeflediğini açıklamıştı.</p>
                 <p>Yeni ambalajla birlikte, 4'lü 440 ml Menabrea lager paketleri Tesco ve Waitrose mağazalarında 6.50 sterlinden başlayan fiyatlarla satışa sunuldu. Ürünün önümüzdeki haftalarda Asda ve Morrisons mağazalarında da raflarda yerini alması bekleniyor.</p>
                 <p class="source">Kaynak: <a href="https://www.thegrocer.co.uk/news/candc-group-shifts-menabrea-production-to-the-uk/703170.article" target="_blank" rel="noopener noreferrer">The Grocer</a></p>
+                <div class="back-to-top"><a href="#">Başa dön ↑</a></div>
             </div>
 
             <div class="content-block">
@@ -233,6 +289,7 @@
                 <p>İskoçya merkezli bağımsız üretici Eden Mill, hem cin hem de malt viski üretimi yapacağı yeni tesisinin kapılarını açtı. Yıllık bir milyon litre saf alkol üretim kapasitesine sahip olan tesis, aynı zamanda 300 varillik bir olgunlaştırma alanına da ev sahipliği yapıyor.</p>
                 <p>Yeni tesis sadece üretimle sınırlı kalmayacak; markanın deneyimsel pazarlama yaklaşımını destekleyecek bir müşteri alanı da planlanıyor. Aynı lokasyonda yer alacak bir kokteyl barı ve markaya ait ürünlerin satılacağı bir mağazanın Ağustos 2025'te faaliyete geçmesi bekleniyor.</p>
                 <p class="source">Kaynak: <a href="https://drinksint.com/news/fullstory.php/aid/11687/New_Eden_Mill_Distillery_fills_first_cask.html" target="_blank" rel="noopener noreferrer">Drinks International</a></p>
+                <div class="back-to-top"><a href="#">Başa dön ↑</a></div>
             </div>
 
              <div class="content-block">
@@ -243,11 +300,12 @@
                 <p>California merkezli The Wine Group, Constellation Brands ile önemli bir satın alma anlaşmasına imza attı. Anlaşma kapsamında yaklaşık 2.870 hektarlık üzüm bağı ve üç üretim tesisi The Wine Group bünyesine katılacak.</p>
                 <p>The Wine Group, portföyündeki markaların yanı sıra, Netflix'in popüler programı Love is Blind'da yarışmacılara sunulan şarapları üretmesiyle de dikkat çekiyor. Bu yönüyle hem geleneksel hem de popüler kültüre entegre marka iş birlikleriyle öne çıkan şirket, satın almayla birlikte pazar konumunu daha da sağlamlaştırmayı hedefliyor.</p>
                 <p class="source">Kaynak: <a href="https://www.thedrinksbusiness.com/2025/04/the-wine-group-to-acquire-six-brands-from-constellation/" target="_blank" rel="noopener noreferrer">The Drinks Business</a></p>
+                <div class="back-to-top"><a href="#">Başa dön ↑</a></div>
             </div>
         </div>
 
         <div class="section">
-            <h2>Haftanın Yeni Ürünleri</h2>
+            <h2 id="yeni-urunler">Haftanın Yeni Ürünleri</h2>
 
             <div class="content-block">
                 <div class="content-block-image">
@@ -256,6 +314,7 @@
                 <h3>Lady A Provence Rosé (Marks & Spencer)</h3>
                 <p>Soho House'ın popüler ürünü olan Lady A Provence Rosé şarabı artık Marks & Spencer mağazalarında satışa sunuldu. Bu roze şarap, %12.5 alkol oranına sahip ve standart 75cl cam şişede tüketicilere ulaşıyor. Ürün, Provence bölgesinin karakteristik hafif ve ferahlatıcı lezzetini M&S müşterileriyle buluşturuyor.</p>
                 <p class="source">Kaynak: <a href="https://www.thegrocer.co.uk/news/soho-house-favourite-lady-a-provence-rose-launches-in-mands/703261.article" target="_blank" rel="noopener noreferrer">The Grocer</a></p>
+                <div class="back-to-top"><a href="#">Başa dön ↑</a></div>
             </div>
 
             <div class="content-block">
@@ -264,7 +323,9 @@
                 </div>
                  <h3>Murray & Yeatman Realizzato Likör</h3>
                  <p>Murray & Yeatman, kullanılmış kahve çekirdeklerinden damıtılarak üretilen Realizzato adında yeni bir likör piyasaya sürdü. %20 alkol oranına sahip bu yenilikçi içki, 50cl'lik cam şişelerde sunuluyor. Şirket, bu ürünün dünyada kullanılmış kahve telvesinden üretilen ilk likör olduğunu iddia ediyor ve sürdürülebilirliğe vurgu yapıyor.</p>
-                 <p class="source">Kaynak: <a href="https://www.thegrocer.co.uk/news/murray-and-yeatman-launches-world-first-liqueur-distilled-from-used-coffee-grounds/703150.article" target="_blank" rel="noopener noreferrer">The Grocer</a></p> </div>
+                 <p class="source">Kaynak: <a href="https://www.thegrocer.co.uk/news/murray-and-yeatman-launches-world-first-liqueur-distilled-from-used-coffee-grounds/703150.article" target="_blank" rel="noopener noreferrer">The Grocer</a></p>
+                 <div class="back-to-top"><a href="#">Başa dön ↑</a></div>
+            </div>
 
             <div class="content-block">
                 <div class="content-block-image">
@@ -273,11 +334,12 @@
                 <h3>Aldi Costellore Pinot Grigio (Alüminyum Şişe)</h3>
                 <p>Aldi, kendi markası olan Costellore Pinot Grigio beyaz şarabını Birleşik Krallık süpermarketlerinde bir ilk olarak alüminyum şişede satışa çıkardı. %11 alkol oranına sahip bu şarap, 75cl'lik geri dönüştürülebilir ve daha hızlı soğuyan alüminyum şişelerde 5.99 GBP fiyatla satılıyor.</p>
                 <p class="source">Kaynak: <a href="https://www.thegrocer.co.uk/news/aldi-claims-uk-supermarket-first-with-own-label-aluminium-wine-bottle/703161.article" target="_blank" rel="noopener noreferrer">The Grocer</a></p>
+                <div class="back-to-top"><a href="#">Başa dön ↑</a></div>
             </div>
         </div>
 
         <div class="section">
-            <h2>Göze Çarpan Pazarlama Kampanyaları</h2>
+            <h2 id="pazarlama-kampanyalari">Göze Çarpan Pazarlama Kampanyaları</h2>
 
             <div class="content-block">
                 <div class="content-block-image">
@@ -286,6 +348,7 @@
                 <h3>Malibu ve Brian Cox Kampanyası</h3>
                 <p>Malibu, yaz sezonunu "Succession" dizisiyle tanınan aktör Brian Cox'un yer aldığı yeni bir reklam kampanyasıyla başlattı. Kampanya, Cox'u alışılagelmiş ciddi rollerinin aksine, tatilin ve işten uzaklaşmanın keyfini çıkarırken gösteriyor.</p>
                 <p class="source">Kaynak: <a href="https://www.talkingretail.com/products-news/alcohol/brian-cox-fronts-malibu-campaign-08-04-2025/" target="_blank" rel="noopener noreferrer">Talking Retail</a></p>
+                <div class="back-to-top"><a href="#">Başa dön ↑</a></div>
             </div>
 
              <div class="content-block">
@@ -295,6 +358,7 @@
                 <h3>Brothers Cider ve Glastonbury Festivali Kampanyası</h3>
                 <p>Brothers Cider, İngiltere'nin ikonik müzik festivali Glastonbury'nin 2025 yılındaki resmi elma şarabı (cider) ortağı olacağını duyurdu. Şirket, bu sponsorlukla festival katılımcılarına özel etkinlikler ve deneyimler sunmayı planlıyor.</p>
                 <p class="source">Kaynak: <a href="https://drinksretailingnews.co.uk/brothers-cider-returns-as-official-glastonbury-partner/" target="_blank" rel="noopener noreferrer">Drinks Retailing News</a></p>
+                <div class="back-to-top"><a href="#">Başa dön ↑</a></div>
             </div>
         </div>
 
